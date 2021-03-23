@@ -1,0 +1,82 @@
+body{
+    background-color: black;
+}
+#nav{
+   display: flex;
+   align-items: center;
+   width: 100%;
+   background-color: black; 
+   border-radius: 10px;
+}
+#nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 1000px;
+    
+}
+#nav ul li{
+    list-style: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: crimson;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#nav ul li:hover{
+    cursor: pointer;
+    background-color: chocolate;
+    color: black;
+}
+
+.image{
+    /* display: flex; */
+    margin: 10px;
+    /* border: 2px solid gray; */
+    height: 87vh;
+    width: 96vw;
+    /* position: absolute; */
+    background-image: url('../img/arch1.jpg');
+    background-size: 100% 100%;
+    box-shadow: 1px 2px 10px gray;
+    animation: slider 10s infinite linear;
+
+}
+
+@keyframes slider{
+    0%{
+        background-image: url('../img/arch1.jpg');
+    }
+    35%{
+        background-image: url('../img/arch2.jpg');
+    }
+    75%{
+        background-image: url('../img/arch3.jpg');
+    }
+}
+
+.info::before{
+    content: "We Make The Best Designs Possible.";
+    font-size: 4rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: crimson;
+    /* margin-top: 20px; */
+    padding-left: 10px;
+    /* transform: translateY(-50); */
+    animation: text 10s infinite ease;
+}
+
+@keyframes text{
+    0%{
+        content: "We Make The Best Designs Possible.";
+    }
+
+    35%{
+        content: "Submit us your designs.";
+    }
+
+    75%{
+        content: "Make your dream building come alive.";
+    }
+}
